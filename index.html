@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Liyan Fashion | Kids Garments Manufacturer & Wholesaler</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:
+linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.92)),
+url("https://www.transparenttextures.com/patterns/fabric-of-squares.png");
+background-attachment:fixed;
+color:#333;
+overflow-x:hidden;
+}
+
+header{
+
+height:100vh;
+
+background:
+
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+
+url("https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+.hero h1{
+
+font-size:65px;
+
+font-weight:800;
+
+color:white;
+
+letter-spacing:2px;
+
+text-shadow:0 10px 30px rgba(0,0,0,.4);
+
+}
+
+.hero p{
+
+margin-top:20px;
+
+font-size:22px;
+
+color:#ffe082;
+
+}
+
+.btn{
+
+display:inline-block;
+
+margin-top:35px;
+
+padding:15px 40px;
+
+background:#ff6f61;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:40px;
+
+font-weight:700;
+
+transition:.4s;
+
+}
+
+.btn:hover{
+
+background:#ff3d2e;
+
+transform:translateY(-5px);
+
+}
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 8%;
+
+background:rgba(255,255,255,.95);
+
+backdrop-filter:blur(8px);
+
+z-index:999;
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.logo{
+
+font-size:30px;
+
+font-weight:800;
+
+color:#ff6f61;
+
+}
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:25px;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:#333;
+
+font-weight:600;
+
+}
+
+nav a:hover{
+
+color:#ff6f61;
+
+}
+
+section{
+
+padding:90px 8%;
+
+}
+
+.title{
+
+font-size:42px;
+
+text-align:center;
+
+margin-bottom:20px;
+
+color:#ff6f61;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+max-width:900px;
+
+margin:auto;
+
+margin-bottom:60px;
+
+color:#666;
+
+line-height:1.8;
+
+}
+
+.about{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+.about img{
+
+width:100%;
+
+border-radius:20px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.about h2{
+
+font-size:40px;
+
+margin-bottom:20px;
+
+}
+
+.about p{
+
+line-height:2;
+
+color:#555;
+
+}
+
+.products{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card img{
+
+width:100%;
+
+height:260px;
+
+object-fit:cover;
+
+}
+
+.card h3{
+
+padding-top:20px;
+
+font-size:24px;
+
+}
+
+.card p{
+
+padding:15px 25px 30px;
+
+color:#666;
+
+}
+
+.why{
+
+background:#fff6f5;
+
+}
+
+.features{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+.feature{
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+text-align:center;
+
+}
+
+.feature h3{
+
+margin:20px 0;
+
+color:#ff6f61;
+
+}
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+height:250px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+}
+
+.contact{
+
+background:#2d2d2d;
+
+color:white;
+
+text-align:center;
+
+}
+
+.contact h2{
+
+font-size:40px;
+
+margin-bottom:20px;
+
+}
+
+.contact p{
+
+margin:12px 0;
+
+font-size:18px;
+
+}
+
+.whatsapp{
+
+display:inline-block;
+
+margin-top:30px;
+
+background:#25D366;
+
+padding:16px 40px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+color:white;
+
+font-weight:bold;
+
+}
+
+footer{
+
+background:#1a1a1a;
+
+color:#ccc;
+
+padding:25px;
+
+text-align:center;
+
+}
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.about{
+
+grid-template-columns:1fr;
+
+}
+
+nav{
+
+flex-direction:column;
+
+}
+
+nav ul{
+
+margin-top:15px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">LIYAN FASHION</div>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#products">Products</a></li>
+
+<li><a href="#gallery">Gallery</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<header>
+
+<div class="hero">
+
+<h1>Premium Kids Garments Manufacturer & Wholesaler</h1>
+
+<p>Quality • Comfort • Fashion • Bulk Supply Across India</p>
+
+<a href="#products" class="btn">Explore Collection</a>
+
+</div>
+
+</header>
+
+<section id="about">
+
+<h1 class="title">About Liyan Fashion</h1>
+
+<p class="subtitle">
+
+Liyan Fashion is a trusted manufacturer and wholesaler of premium kids garments. We combine modern fashion trends with high-quality fabrics to create comfortable, stylish clothing for children. We proudly supply retailers, distributors, and wholesalers with consistent quality and competitive pricing.
+
+</p>
+
+<div class="about">
+
+<img src="about.jpg">
+
+<div>
+
+<h2>Manufacturing Excellence</h2>
+
+<p>
+
+From fabric selection to stitching, quality inspection, packaging, and dispatch, every garment is produced with precision. Our experienced team ensures every product meets high standards before reaching our customers.
+
+</p>
+
+<a href="#contact" class="btn">Contact Us</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="products">
+
+<h1 class="title">Our Collections</h1>
+
+<p class="subtitle">
+
+Explore our wide range of fashionable kids wear.
+
+</p>
+
+<div class="products">
+
+<div class="card">
+<img src="product1.jpg">
+<h3 style="text-align:center;">Baby Wear</h3>
+<p>Soft premium cotton wear for infants.</p>
+</div>
+
+<div class="card">
+<img src="product2.jpg">
+<h3 style="text-align:center;">Boys Collection</h3>
+<p>Stylish casual and festive clothing.</p>
+</div>
+
+<div class="card">
+<img src="product3.jpg">
+<h3 style="text-align:center;">Girls Collection</h3>
+<p>Beautiful dresses and trendy outfits.</p>
+</div>
+
+<div class="card">
+<img src="product4.jpg">
+<h3 style="text-align:center;">Winter Wear</h3>
+<p>Warm and comfortable seasonal clothing.</p>
+</div>
+
+</div>
+
+</section>
